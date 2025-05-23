@@ -1,0 +1,205 @@
+@use "../abstract/" as *;
+
+.homeBanner {
+  padding: 5rem 0;
+  background: $dark;
+  color: $light;
+  &__wrapper {
+    justify-items: center;
+    small {
+      color: $secondary;
+      letter-spacing: 1rem;
+    }
+    h1 {
+      text-shadow: -2px -2px $secondary;
+      margin-block: 3rem;
+    }
+    p {
+      max-width: 65rem;
+      text-align: center;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .button {
+      display: flex;
+      gap: 2rem;
+      font-family: Blinker-Semibold;
+      margin-bottom: 10rem;
+    }
+  }
+}
+
+.homeSpecialmenu {
+  background: $primary;
+  color: $light;
+  padding: 5rem 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    max-width: 53rem;
+    padding-inline: 1.5rem;
+    margin: 0 auto;
+  }
+  &__wrapper {
+    @include flexAround;
+    padding-block: 5rem;
+    h6 {
+      text-align: center;
+    }
+    p {
+      color: $secondary;
+    }
+    .button {
+      justify-self: center;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.homeAbout {
+  padding: 8rem 0;
+  @include backgroundImage($url: "/dist/img/about.png");
+  color: $light;
+  &__wrapper {
+    margin-block: 10rem;
+    small {
+      color: $secondary;
+    }
+    p {
+      max-width: 60rem;
+      padding-block: 5rem;
+    }
+  }
+}
+
+.homeMenu {
+  background: $primary;
+  color: $light;
+  padding: 5rem 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    max-width: 53rem;
+    padding-inline: 1.5rem;
+    margin: 0 auto;
+  }
+  &__wrapper {
+    @include flexAround;
+    padding-block: 5rem;
+  }
+  &__info {
+    h4 {
+      color: $secondary;
+      @include flexBetween;
+      font-weight: 600;
+    }
+    p {
+      text-align: start;
+      padding: 0;
+    }
+    &__item {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.homeBooking {
+  background: $primary;
+  padding: 5rem 0;
+  &__wrapper {
+    @include backgroundImage($url: "/dist/img/book-table.jpg");
+    width: 100%;
+    height: 100rem;
+    place-content: center;
+    place-items: center;
+  }
+  &__bgform {
+    background: $primary;
+    padding: 8rem 5rem;
+    form {
+      padding: 3rem;
+      width: 80rem;
+      border: 1px solid $light;
+      input,
+      textarea {
+        border: 1px solid $secondary;
+      }
+    }
+    h3 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: WinkySans-Regular;
+      font-weight: 500;
+      color: $secondary;
+    }
+    .button {
+      place-self: center;
+    }
+  }
+}
+
+.homeTestimonial {
+  padding: 5rem 0;
+  background: $primary;
+  color: $light;
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    justify-items: center;
+    padding: 5rem 0;
+    i {
+      font-size: 3rem;
+      padding: 2rem;
+      border: 1px solid $secondary;
+      border-radius: 50%;
+    }
+    p {
+      max-width: 35rem;
+      text-align: center;
+      padding-block: 3rem;
+    }
+    h4 {
+      color: $secondary;
+    }
+  }
+  iframe {
+    width: 80%;
+    height: 60rem;
+    display: block;
+    margin: 10rem auto;
+  }
+}
+
+.homeBlog {
+  background: $primary;
+  color: $light;
+  padding: 5rem 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    max-width: 60rem;
+    padding-inline: 1.5rem;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    @include grid(3, 5rem);
+    p {
+      text-align: start;
+      padding: 0;
+      padding-block: 1rem;
+    }
+    img {
+      @include imageCover(100%, auto);
+      margin-block: 3rem;
+    }
+  }
+}

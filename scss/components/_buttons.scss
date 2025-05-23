@@ -1,0 +1,41 @@
+@use "../abstract/" as *;
+
+.btn {
+  padding: 1rem 2.5rem;
+  border: 1px solid transparent;
+  border-radius: 5rem;
+  display: inline-flex;
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  &-secondary {
+    background: $secondary;
+    color: $light;
+    border: 1px solid $secondary;
+    &:hover {
+      background: $dark;
+      color: $secondary;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  &-border {
+    border: 1px solid $secondary;
+    border-radius: 5rem;
+    color: $secondary;
+    &:hover {
+      background-color: $secondary;
+      color: $light;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  &-bRadiusNone {
+    border: 1px solid $secondary;
+    color: $secondary;
+    border-radius: 5px;
+    &:hover {
+      background-color: $secondary;
+      color: $light;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

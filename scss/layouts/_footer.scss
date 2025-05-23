@@ -1,0 +1,46 @@
+@use "../abstract/" as *;
+
+.footer {
+  padding-top: 5rem;
+  background: $darkBlue;
+  color: $light;
+  &__wrapper {
+    @include flexAround;
+    h5 {
+      margin-bottom: 3rem;
+    }
+    ul li {
+      margin-bottom: 1rem;
+    }
+  }
+  &__contact {
+    p {
+      padding-top: 1rem;
+      span {
+        color: $secondary;
+        margin-right: 5px;
+      }
+    }
+  }
+  &__social {
+    form {
+      display: flex;
+      gap: 2rem;
+      input {
+        border: 1px solid $secondary;
+        border-radius: 5rem;
+        &::placeholder {
+          color: #272729;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  &__bottom {
+    text-align: center;
+    padding-block: 3rem;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../abstract/" as *;
+.header {
+  background: $dark;
+  color: $light;
+  padding-block: 2rem;
+  position: relative;
+  box-shadow: rgba(221, 29, 1, 0.3) 0px 1px 4px;
+
+  &__wrapper {
+    @include flexBetween;
+    ul {
+      @include flexBetween;
+      gap: 3rem;
+    }
+  }
+}

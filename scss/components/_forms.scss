@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+
+.input__wrap {
+  display: flex;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  background-color: transparent;
+  color: $light;
+}
+textarea {
+  height: 15rem;
+}
+input::placeholder,
+textarea::placeholder {
+  color: $light;
+  font-family: WinkySans-Regular;
+}
