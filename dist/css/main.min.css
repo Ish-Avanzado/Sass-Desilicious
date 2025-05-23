@@ -260,7 +260,6 @@ textarea::placeholder {
 .homeBanner__wrapper .button {
   display: flex;
   gap: 2rem;
-  font-family: Blinker-Semibold;
   margin-bottom: 10rem;
 }
 
