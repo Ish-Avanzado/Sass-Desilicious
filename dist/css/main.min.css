@@ -309,6 +309,7 @@ textarea::placeholder {
   display: none;
   font-size: 3rem;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 .header__wrapper .toggle__menu:hover {
   color: #dd1d01;
@@ -326,9 +327,11 @@ textarea::placeholder {
 .header__nav {
   display: flex;
   gap: 3rem;
+  transition: all 0.5s ease;
 }
 .header__nav .active {
   color: #dd1d01;
+  transition: all 0.5s ease;
 }
 @media screen and (max-width: 80rem) {
   .header__nav {
@@ -342,6 +345,7 @@ textarea::placeholder {
     overflow: hidden;
     background: #000;
     padding-top: 3rem;
+    transition: all 0.5s ease;
   }
 }
 .header__nav li {
@@ -619,21 +623,18 @@ textarea::placeholder {
 }
 @media screen and (max-width: 80rem) {
   .homeTestimonial .sliderT__nav {
-    display: block;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20rem;
   }
 }
 @media screen and (max-width: 45rem) {
   .homeTestimonial .sliderT__nav {
     display: none;
   }
-}
-.homeTestimonial .sliderT__nav {
-  width: 100%;
-  font-size: 2rem;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 20rem;
 }
 .homeTestimonial .sliderM {
   display: none;
@@ -648,16 +649,13 @@ textarea::placeholder {
 }
 @media screen and (max-width: 45rem) {
   .homeTestimonial .sliderM__nav {
-    display: block;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20rem;
   }
-}
-.homeTestimonial .sliderM__nav {
-  width: 100%;
-  font-size: 2rem;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 20rem;
 }
 .homeTestimonial iframe {
   width: 80%;

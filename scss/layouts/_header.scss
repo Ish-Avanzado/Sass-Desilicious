@@ -18,6 +18,7 @@
       display: none;
       font-size: 3rem;
       cursor: pointer;
+      transition: all 0.5s ease;
       &:hover {
         color: $secondary;
       }
@@ -34,8 +35,10 @@
   &__nav {
     display: flex;
     gap: 3rem;
+    transition: all 0.5s ease;
     .active {
       color: $secondary;
+      transition: all 0.5s ease;
     }
     @include mediaQuery($tablet) {
       position: absolute;
@@ -48,6 +51,7 @@
       overflow: hidden;
       background: $dark;
       padding-top: 3rem;
+      transition: all 0.5s ease;
       // opacity: 0;
     }
     li {
