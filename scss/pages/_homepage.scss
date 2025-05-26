@@ -184,6 +184,9 @@
   &__item {
     justify-items: center;
     padding: 5rem 0;
+    @include mediaQuery($tablet) {
+      padding: 2rem 0;
+    }
     i {
       font-size: 3rem;
       padding: 2rem;
@@ -199,16 +202,16 @@
       color: $secondary;
     }
   }
-  .sliderD {
-    @include mediaQuery($tablet) {
-      display: none;
-    }
-  }
+  // .sliderD {
+  //   @include mediaQuery($tablet) {
+  //     display: none;
+  //   }
+  // }
 
   .sliderD__nav {
-    @include mediaQuery($tablet) {
-      display: none;
-    }
+    // @include mediaQuery($tablet) {
+    //   display: none;
+    // }
     width: 100%;
     font-size: 2rem;
     display: flex;
@@ -216,50 +219,49 @@
     position: absolute;
     top: 20rem;
   }
-  .sliderT {
-    display: none;
-    @include mediaQuery($tablet) {
-      display: block;
-    }
-    @include mediaQuery($mobile) {
-      display: none;
-    }
-  }
+  // .sliderT {
+  //   display: none;
+  //   @include mediaQuery($tablet) {
+  //     display: block;
+  //   }
+  //   @include mediaQuery($mobile) {
+  //     display: none;
+  //   }
+  // }
 
-  .sliderT__nav {
-    display: none;
-    @include mediaQuery($tablet) {
-      width: 100%;
-      font-size: 2rem;
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      top: 20rem;
-    }
-    @include mediaQuery($mobile) {
-      display: none;
-    }
-  }
+  // .sliderT__nav {
+  //   display: none;
+  //   @include mediaQuery($tablet) {
+  //     width: 100%;
+  //     font-size: 2rem;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     position: absolute;
+  //     top: 20rem;
+  //   }
+  //   @include mediaQuery($mobile) {
+  //     display: none;
+  //   }
+  // }
 
-  .sliderM {
-    display: none;
-    @include mediaQuery($mobile) {
-      display: block;
-    }
-  }
+  // .sliderM {
+  //   display: none;
+  //   @include mediaQuery($mobile) {
+  //     display: block;
+  //   }
+  // }
 
-  .sliderM__nav {
-    display: none;
-    @include mediaQuery($mobile) {
-      // display: block;
-      width: 100%;
-      font-size: 2rem;
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      top: 20rem;
-    }
-  }
+  // .sliderM__nav {
+  //   display: none;
+  //   @include mediaQuery($mobile) {
+  //     width: 100%;
+  //     font-size: 2rem;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     position: absolute;
+  //     top: 20rem;
+  //   }
+  // }
   iframe {
     width: 80%;
     height: 60rem;

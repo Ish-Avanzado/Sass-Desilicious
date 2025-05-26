@@ -15,28 +15,40 @@ var slider = tns({
   mouseDrag: true,
   navContainer: ".sliderD__nav",
   speed: 300,
+  autoplay: true,
+  responsive: {
+    1450: {
+      items: 3,
+    },
+    800: {
+      items: 2,
+    },
+    450: {
+      items: 1,
+    },
+  },
 });
 
-var slider = tns({
-  container: ".sliderT",
-  items: 2,
-  slideBy: "page",
-  autoplay: true,
-  controls: 0,
-  autoplayButtonOutput: 0,
-  mouseDrag: true,
-  navContainer: ".sliderT__nav",
-  speed: 300,
-});
+// var slider = tns({
+//   container: ".sliderT",
+//   items: 2,
+//   slideBy: "page",
+//   autoplay: true,
+//   controls: 0,
+//   autoplayButtonOutput: 0,
+//   mouseDrag: true,
+//   navContainer: ".sliderT__nav",
+//   speed: 300,
+// });
 
-var slider = tns({
-  container: ".sliderM",
-  items: 1,
-  slideBy: "page",
-  autoplay: true,
-  controls: 0,
-  autoplayButtonOutput: 0,
-  mouseDrag: true,
-  navContainer: ".sliderM__nav",
-  speed: 300,
-});
+// var slider = tns({
+//   container: ".sliderM",
+//   items: 1,
+//   slideBy: "page",
+//   autoplay: true,
+//   controls: 0,
+//   autoplayButtonOutput: 0,
+//   mouseDrag: true,
+//   navContainer: ".sliderM__nav",
+//   speed: 300,
+// });
