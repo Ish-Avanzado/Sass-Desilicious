@@ -4,6 +4,9 @@
   padding: 5rem 0;
   background: $dark;
   color: $light;
+  @include mediaQuery($tablet) {
+    padding-top: 15rem;
+  }
   &__wrapper {
     justify-items: center;
     small {
@@ -32,6 +35,9 @@
   background: $primary;
   color: $light;
   padding: 5rem 0;
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
   h2 {
     text-align: center;
   }
@@ -43,7 +49,12 @@
   }
   &__wrapper {
     @include flexAround;
+    flex-wrap: wrap;
+    gap: 3rem;
     padding-block: 5rem;
+    @include mediaQuery($tablet) {
+      padding-block: 2rem;
+    }
     h6 {
       text-align: center;
     }
@@ -61,6 +72,9 @@
   padding: 8rem 0;
   @include backgroundImage($url: "/dist/img/about.png");
   color: $light;
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
   &__wrapper {
     margin-block: 10rem;
     small {
@@ -77,6 +91,9 @@
   background: $primary;
   color: $light;
   padding: 5rem 0;
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
   h2 {
     text-align: center;
   }
@@ -88,7 +105,13 @@
   }
   &__wrapper {
     @include flexAround;
+    flex-wrap: wrap;
+    gap: 3rem;
     padding-block: 5rem;
+    @include mediaQuery($tablet) {
+      gap: 1rem;
+      padding-block: 3rem;
+    }
   }
   &__info {
     h4 {
@@ -109,6 +132,9 @@
 .homeBooking {
   background: $primary;
   padding: 5rem 0;
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
   &__wrapper {
     @include backgroundImage($url: "/dist/img/book-table.jpg");
     width: 100%;
@@ -119,9 +145,12 @@
   &__bgform {
     background: $primary;
     padding: 8rem 5rem;
+    @include mediaQuery($tablet) {
+      padding: 2rem;
+    }
     form {
       padding: 3rem;
-      width: 80rem;
+      width: 100%;
       border: 1px solid $light;
       input,
       textarea {
@@ -145,9 +174,12 @@
   padding: 5rem 0;
   background: $primary;
   color: $light;
+
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
   &__wrapper {
-    display: flex;
-    justify-content: space-around;
+    position: relative;
   }
   &__item {
     justify-items: center;
@@ -167,11 +199,78 @@
       color: $secondary;
     }
   }
+  .sliderD {
+    @include mediaQuery($tablet) {
+      display: none;
+    }
+  }
+
+  .sliderD__nav {
+    @include mediaQuery($tablet) {
+      display: none;
+    }
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20rem;
+  }
+  .sliderT {
+    display: none;
+    @include mediaQuery($tablet) {
+      display: block;
+    }
+    @include mediaQuery($mobile) {
+      display: none;
+    }
+  }
+  .sliderT__nav {
+    display: none;
+    @include mediaQuery($tablet) {
+      display: block;
+    }
+    @include mediaQuery($mobile) {
+      display: none;
+    }
+  }
+  .sliderT__nav {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20rem;
+  }
+
+  .sliderM {
+    display: none;
+    @include mediaQuery($mobile) {
+      display: block;
+    }
+  }
+  .sliderM__nav {
+    display: none;
+    @include mediaQuery($mobile) {
+      display: block;
+    }
+  }
+  .sliderM__nav {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20rem;
+  }
   iframe {
     width: 80%;
     height: 60rem;
     display: block;
     margin: 10rem auto;
+    @include mediaQuery($tablet) {
+      margin: 2rem auto;
+    }
   }
 }
 
@@ -179,6 +278,9 @@
   background: $primary;
   color: $light;
   padding: 5rem 0;
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
   h2 {
     text-align: center;
   }
@@ -191,6 +293,12 @@
 
   &__wrapper {
     @include grid(3, 5rem);
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
     p {
       text-align: start;
       padding: 0;

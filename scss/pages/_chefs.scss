@@ -1,0 +1,41 @@
+@use "../abstract/" as *;
+.chefs {
+  background: $primary;
+  color: $light;
+  padding: 5rem 0;
+  @include mediaQuery($tablet) {
+    padding: 2rem 0;
+  }
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    font-family: WinkySans-Regular;
+    margin-bottom: 3rem;
+  }
+  &__wrapper {
+    @include grid(4, 1rem);
+    justify-items: center;
+    @include mediaQuery($tablet) {
+      @include grid(2, 1rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 1rem);
+    }
+  }
+  &__profile {
+    margin-bottom: 5rem;
+    @include mediaQuery($mobile) {
+      margin-bottom: 1rem;
+    }
+    h4,
+    p {
+      text-align: center;
+    }
+    p {
+      color: $secondary;
+    }
+    img {
+        border-radius: 3rem;
+    }
+  }
+}

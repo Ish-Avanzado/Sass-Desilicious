@@ -22,3 +22,8 @@ textarea::placeholder {
   color: $light;
   font-family: WinkySans-Regular;
 }
+
+.input__wrap {
+  display: flex;
+  flex-direction: column;
+}

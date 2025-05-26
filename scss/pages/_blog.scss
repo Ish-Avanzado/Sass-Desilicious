@@ -1,0 +1,26 @@
+@use "../abstract/" as *;
+
+.blog {
+  background: $primary;
+  padding: 5rem 0;
+  color: $light;
+  @include mediaQuery($tablet) {
+    padding-top: 10rem;
+  }
+  &__item {
+    justify-self: center;
+    margin-bottom: 3rem;
+    h4 {
+      font-weight: 600;
+    }
+    p {
+      max-width: 80rem;
+      padding-block: 2rem;
+    }
+    img {
+      @include imageCover(100%, auto);
+      border-radius: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

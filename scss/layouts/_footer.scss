@@ -4,10 +4,31 @@
   padding-top: 5rem;
   background: $darkBlue;
   color: $light;
+  @include mediaQuery($tablet) {
+    padding-top: 2rem;
+  }
+  ul {
+    li {
+      &:hover {
+        color: $secondary;
+        transition: all 0.5s ease;
+      }
+    }
+  }
   &__wrapper {
     @include flexAround;
+    flex-wrap: wrap;
+    @include mediaQuery($tablet) {
+      @include grid(2, 3rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 3rem);
+    }
     h5 {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
+      @include mediaQuery($tablet) {
+        margin-bottom: 2rem;
+      }
     }
     ul li {
       margin-bottom: 1rem;
@@ -37,10 +58,29 @@
     ul {
       display: flex;
       gap: 2rem;
+      @include mediaQuery($mobile) {
+        place-content: center;
+      }
+      li {
+        @include mediaQuery($mobile) {
+          margin: 2rem 0 0;
+        }
+        &:hover {
+          color: $secondary;
+          scale: 1.2;
+          transition: all 0.5s ease;
+        }
+      }
     }
   }
   &__bottom {
     text-align: center;
     padding-block: 3rem;
+    @include mediaQuery($tablet) {
+      padding-block: 1rem;
+    }
+    @include mediaQuery($mobile) {
+      padding-block: 0rem;
+    }
   }
 }
